@@ -8,7 +8,6 @@ import service.impl.AccountServiceImpl;
 import service.impl.AuthenticationManagerImpl;
 import service.impl.BankServiceImpl;
 import service.impl.LogServiceImpl;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -51,6 +50,10 @@ public class Injector {
     private Object createNewInstance(Class<?> clazz) {
         if (instances.containsKey(clazz)) {
             return instances.get(clazz);
+        }
+        if (!clazz.isAnnotationPresent(Component.class)) {
+            throw new RuntimeException("Can't create clazz " + clazz.getName()
+                    + " It isn't @Component");
         }
         try {
             Constructor<?> constructor = clazz.getConstructor();

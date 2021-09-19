@@ -1,5 +1,6 @@
 package service.impl;
 
+import lib.Component;
 import model.Account;
 import model.User;
 import service.AccountService;
@@ -8,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class AccountServiceImpl implements AccountService {
     private static final List<Account> accounts = new ArrayList<>();
     static {

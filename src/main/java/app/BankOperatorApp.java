@@ -1,9 +1,11 @@
 package app;
 
+import lib.Component;
 import service.BankService;
 
 import java.math.BigDecimal;
 
+@Component
 public class BankOperatorApp {
     private BankService bankService;
 

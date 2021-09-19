@@ -1,5 +1,6 @@
 package service.impl;
 
+import lib.Component;
 import lib.Inject;
 import model.Account;
 import model.User;
@@ -8,6 +9,7 @@ import service.AuthenticationManager;
 
 import java.util.Optional;
 
+@Component
 public class AuthenticationManagerImpl implements AuthenticationManager {
     @Inject
     private AccountService accountService;

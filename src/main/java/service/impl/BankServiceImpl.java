@@ -1,5 +1,6 @@
 package service.impl;
 
+import lib.Component;
 import lib.Inject;
 import model.Account;
 import service.AccountService;
@@ -10,6 +11,7 @@ import service.LogService;
 import java.math.BigDecimal;
 import java.util.Optional;
 
+@Component
 public class BankServiceImpl implements BankService {
     @Inject
     private AccountService accountService;
