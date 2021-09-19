@@ -1,5 +1,6 @@
 package app;
 
+import lib.Inject;
 import model.Account;
 import model.User;
 import service.AccountService;
@@ -9,7 +10,9 @@ import java.math.BigDecimal;
 import java.util.Optional;
 
 public class AtmApp {
+    @Inject
     private BankService bankService;
+    @Inject
     private AccountService accountService;
     private User currentUser;
 
